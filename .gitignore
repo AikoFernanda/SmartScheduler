@@ -1,0 +1,24 @@
+# Git file yang tidka boleh di-upload
+
+# --- Compiled Binaries & Object Files ---
+*.exe
+*.out
+*.o
+*.obj
+app
+main
+
+# --- IDE & Editor Configurations ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- OS Generated Files ---
+.DS_Store
+Thumbs.db
+
+# --- Build Directories (Optional) ---
+build/
+bin/
+dist/
