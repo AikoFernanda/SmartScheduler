@@ -62,7 +62,9 @@ void BookingManager::autoSchedule(std::vector<Reservasi> daftar_permintaan)
                 successCount++;
 
                 // comment baris ini jika tidak inginingin log detail per item
-                std::cout << " -> " << req.getId() << " masuk ke " << asset->getName() << "\n";
+                std::cout << " [OK] " << req.getId() 
+                          << " (" << req.getStart() << "-" << req.getEnd() << ")"
+                          << " --> " << asset->getName() << "\n";
 
                 break; // berhenti cari, lanjut ke request berikutny
             }
@@ -70,7 +72,10 @@ void BookingManager::autoSchedule(std::vector<Reservasi> daftar_permintaan)
         if (!isBooked)
         {
             failCount++;
-            // std::cout << " -> " << req.getId() << " GAGAL (Tidak ada ruangan muat)\n";
+            // comment jika tidak ingin menampilkan log gagal
+            std::cout << " [X]  " << req.getId() 
+                      << " (" << req.getStart() << "-" << req.getEnd() << ")"
+                      << " --> GAGAL (Penuh)\n";
         }
     }
 
