@@ -13,9 +13,9 @@ class Reservasi {
     Reservasi(std::string id, int start, int end) : id_kegiatan(id), start_time(start), end_time(end){};
 
     // getter
-    int getStart() const {};
-    int getEnd() const {};
-    std::string getId() const {};
+    int getStart() const {return start_time;}
+    int getEnd() const {return end_time;}
+    std::string getId() const {return id_kegiatan;}
 };
 
 #endif

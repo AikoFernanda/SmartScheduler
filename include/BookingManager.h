@@ -17,7 +17,7 @@ class BookingManager {
     void addAsset(Bookable* aset) {daftar_aset.push_back(aset);} 
 
     // skenario 1: kelas P (booking manual 1 ruangan)
-    bool bookingManual(std::string nama_aset, std::string id, int start, int end);
+    bool bookManual(std::string nama_aset, std::string id, int start, int end);
 
     // skenario 2: kelas NP-complete (scheduler otomatis dengan algoritma greedy), inputnya list kegiatan yg mau dimasukkan
     void autoSchedule(std::vector<Reservasi> daftar_permintaan);
